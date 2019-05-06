@@ -1,6 +1,6 @@
 # Linux Setup Scripts
 
-This is a repository containing scripts for setting up my linux installation
+This is a repository which contains scripts for setting up my linux installation
 
 ## Contents
 
@@ -18,7 +18,8 @@ This is a repository containing scripts for setting up my linux installation
     - adapta GTK theme
     - breeze cursor theme
     - papirus icons
-* Application
+    - powerline-shell
+* Applications
     - nodejs, npm
     - skype
     - Visual Studio Code
