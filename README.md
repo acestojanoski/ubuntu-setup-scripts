@@ -12,6 +12,7 @@ This is a repository which contains scripts for setting up my linux installation
     - vim 
     - rofi
     - shutter
+    - meld
 *   Nvidia driver 390
 *   MT7630E driver for mediatek wireless card
 *   Theming
