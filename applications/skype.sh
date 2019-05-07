@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [[ -f /tmp/skypeforlinux-* ]]; then
-	sudo rm /tmp/skypeforlinux-*.deb
+if [[ -f /tmp/skypeforlinux-64.deb ]]; then
+	sudo rm /tmp/skypeforlinux-64.deb
 fi
 
 sudo wget https://go.skype.com/skypeforlinux-64.deb -O /tmp/skypeforlinux-64.deb

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [[ -f /tmp/teamviewer-* ]]; then
-	sudo rm /tmp/teamviewer-*.deb
+if [[ -f /tmp/teamviewer_amd64.deb ]]; then
+	sudo rm /tmp/teamviewer_amd64.deb
 fi
 
 sudo wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb -O /tmp/teamviewer_amd64.deb
