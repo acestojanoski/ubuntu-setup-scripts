@@ -26,3 +26,5 @@ This is a repository which contains scripts for setting up my linux installation
     - Visual Studio Code
     - TeamViewer
     - Sublime
+    - Chromium browser
+
