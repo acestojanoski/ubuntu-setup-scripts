@@ -13,6 +13,7 @@ This is a repository which contains scripts for setting up my linux installation
     - rofi
     - shutter
     - meld
+    - Chromium browser
 *   Nvidia driver 390
 *   MT7630E driver for mediatek wireless card
 *   Theming
@@ -26,5 +27,4 @@ This is a repository which contains scripts for setting up my linux installation
     - Visual Studio Code
     - TeamViewer
     - Sublime
-    - Chromium browser
 
