@@ -32,4 +32,5 @@ git clone https://gitlab.com/acestojanoski/linux-setup-scripts.git && cd linux-s
     - TeamViewer
     - Sublime
     - VirtualBox
+    - Docker
 
