@@ -34,3 +34,6 @@ git clone https://gitlab.com/acestojanoski/linux-setup-scripts.git && cd linux-s
     - VirtualBox
     - Docker
 
+## Applications
+
+You can change the URL of the .deb packages to install other versions of the applications
