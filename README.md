@@ -33,6 +33,7 @@ git clone https://gitlab.com/acestojanoski/linux-setup-scripts.git && cd linux-s
     - Sublime
     - VirtualBox
     - Docker
+    - Obs
 
 ## Applications
 
