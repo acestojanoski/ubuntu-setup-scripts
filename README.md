@@ -25,7 +25,7 @@ git clone https://gitlab.com/acestojanoski/linux-setup-scripts.git && cd linux-s
     - breeze cursor theme
     - papirus icons
     - powerline-shell
-* Applications
+*   Applications
     - nodejs, npm
     - skype
     - Visual Studio Code
@@ -34,6 +34,10 @@ git clone https://gitlab.com/acestojanoski/linux-setup-scripts.git && cd linux-s
     - VirtualBox
     - Docker
     - Obs
+*   i3
+    - install dependencies script
+    - install i3 and i3 core packages script
+    - install i3-gaps script
 
 ## Applications
 
