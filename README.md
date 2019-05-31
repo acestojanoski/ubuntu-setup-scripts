@@ -4,7 +4,7 @@ This is a repository which contains scripts for setting up my linux installation
 
 ## Cloning
 `
-git clone https://gitlab.com/acestojanoski/linux-setup-scripts.git && cd linux-setup-scripts && sudo chmod +x ./*.sh ./applications/*.sh ./theming/*.sh
+git clone https://gitlab.com/acestojanoski/linux-setup-scripts.git && cd linux-setup-scripts && sudo chmod +x ./*.sh ./applications/*.sh ./theming/*.sh ./i3/*.sh
 `
 ## Contents
 
