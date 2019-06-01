@@ -178,8 +178,8 @@ bar {
            urgent_workspace   #2f343a #900000 #ffffff
         }
   font pango:UbuntuMono Nerd Font 10
-        status_command /home/ace/bumblebee-status/bumblebee-status \
-    -m memory cpu layout brightness battery pulseaudio date time \
+        status_command /home/aleksandar/bumblebee-status/bumblebee-status \
+    -m memory cpu layout brightness battery date time \
     -p date.left-click="gsimplecal" \
     layout.left-click="setxkbmap us" \
     layout.right-click="setxkbmap mk" \
@@ -187,11 +187,11 @@ bar {
 }
 
 # Custom bindings and startup apps
-bindsym $mod+Shift+d exec j4-dmenu-desktop
+bindsym $mod+Shift+d exec rofi -show drun
 bindsym $mod+Ctrl+l exec i3lock
 bindsym $mod+Caps_Lock exec (setxkbmap -query | grep -q "layout:\s\+us") && setxkbmap mk || setxkbmap us
 
-exec_always feh --bg-scale /usr/share/backgrounds/linuxmint-tara/oskarssylwan_symmetry.jpg
+exec_always feh --bg-scale /usr/share/backgrounds/linuxmint-tessa/skunze_beach.jpg
 exec_always compton
 exec_always terminator
 
