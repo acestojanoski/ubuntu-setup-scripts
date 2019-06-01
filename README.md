@@ -1,15 +1,19 @@
 # Linux Setup Scripts
 
-This is a repository which contains scripts for setting up my linux installation
+This is a repository which contains scripts for setting up my linux installation.
+
+Modify them to fit your needs.
 
 ## Cloning
 `
 git clone https://gitlab.com/acestojanoski/linux-setup-scripts.git && cd linux-setup-scripts && sudo chmod +x ./*.sh ./applications/*.sh ./theming/*.sh ./i3/*.sh
 `
+
 ## Contents
 
 *   Core packages:
     - terminator
+    - neofetch
     - vlc
     - zip, unzip, rar, unrar
     - build-essential
@@ -39,6 +43,6 @@ git clone https://gitlab.com/acestojanoski/linux-setup-scripts.git && cd linux-s
     - install i3 and i3 core packages script
     - install i3-gaps script
 
-## Applications
+### Applications
 
 You can change the URL of the .deb packages to install other versions of the applications
