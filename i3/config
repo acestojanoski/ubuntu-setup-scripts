@@ -189,6 +189,7 @@ bar {
 # Custom bindings and startup apps
 bindsym $mod+Shift+d exec rofi -show drun
 bindsym $mod+Ctrl+l exec i3lock
+bindsym $mod+Shift+s exec shutter -s
 bindsym $mod+Caps_Lock exec (setxkbmap -query | grep -q "layout:\s\+us") && setxkbmap mk || setxkbmap us
 
 exec_always feh --bg-scale /usr/share/backgrounds/linuxmint-tessa/skunze_beach.jpg
