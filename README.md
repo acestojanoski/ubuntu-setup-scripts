@@ -22,6 +22,12 @@ git clone https://gitlab.com/acestojanoski/linux-setup-scripts.git && cd linux-s
     - shutter
     - meld
     - Chromium browser
+    - libreoffice
+    - gimp
+    - dmenu
+    - j4-dmenu-desktop
+    - curl
+    - apt-transport-https
 *   Nvidia driver 390
 *   MT7630E driver for mediatek wireless card
 *   Theming
