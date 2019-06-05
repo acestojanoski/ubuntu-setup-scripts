@@ -32,8 +32,10 @@ git clone https://gitlab.com/acestojanoski/linux-setup-scripts.git && cd linux-s
 *   MT7630E driver for mediatek wireless card
 *   Theming
     - adapta GTK theme
+    - arc theme
     - breeze cursor theme
     - papirus icons
+    - sardi icons
     - powerline-shell
 *   Applications
     - nodejs, npm

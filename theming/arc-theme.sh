@@ -1,4 +1,7 @@
 #!/bin/bash
 
+echo "Updating package lists"
+sudo apt update
+
 echo "Installing arc theme"
-apt install arc-theme -y
+sudo apt install arc-theme -y

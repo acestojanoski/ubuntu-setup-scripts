@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # cleaning tmp
-[ -f /tmp/sardi.tar.gz ] && rm -f /tmp/sardi.tar.gz
+[ -f /tmp/sardi.tar.gz ] && sudo rm -f /tmp/sardi.tar.gz
 # if there is no .icons dir create it
 [ -d $HOME"/.icons" ] || mkdir -p $HOME"/.icons"
 
@@ -12,4 +12,4 @@ wget https://sourceforge.net/projects/sardi/files/latest/download -O /tmp/sardi.
 tar -zxf /tmp/sardi.tar.gz -C $HOME"/.icons"
 
 # cleaning tmp
-[ -f /tmp/sardi.tar.gz ] && rm -f /tmp/sardi.tar.gz
+[ -f /tmp/sardi.tar.gz ] && sudo rm -f /tmp/sardi.tar.gz
