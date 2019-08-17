@@ -4,7 +4,7 @@ echo "Updating package lists"
 sudo apt update
 
 echo "Installing core packages"
-sudo apt install vlc libreoffice terminator gimp \
+sudo apt install vlc libreoffice transmission terminator gimp \
 build-essential vim rofi shutter meld chromium-browser \
 neofetch dmenu j4-dmenu-desktop curl apt-transport-https -y
 

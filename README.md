@@ -28,6 +28,7 @@ git clone https://gitlab.com/acestojanoski/linux-setup-scripts.git && cd linux-s
     - j4-dmenu-desktop
     - curl
     - apt-transport-https
+    - transmission
 *   Nvidia driver 390
 *   MT7630E driver for mediatek wireless card
 *   Theming
@@ -37,6 +38,7 @@ git clone https://gitlab.com/acestojanoski/linux-setup-scripts.git && cd linux-s
     - papirus icons
     - sardi icons
     - powerline-shell
+    - install-fonts
 *   Applications
     - nodejs, npm
     - skype
