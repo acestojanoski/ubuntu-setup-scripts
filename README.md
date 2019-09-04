@@ -52,6 +52,7 @@ git clone https://gitlab.com/acestojanoski/linux-setup-scripts.git && cd linux-s
     - install dependencies script
     - install i3 and i3 core packages script
     - install i3-gaps script
+*   vim-setup.sh - script for setting up vim
 
 ### Applications
 
