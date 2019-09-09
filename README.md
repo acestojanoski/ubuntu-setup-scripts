@@ -48,6 +48,7 @@ git clone https://gitlab.com/acestojanoski/linux-setup-scripts.git && cd linux-s
     - VirtualBox
     - Docker
     - Obs
+    - Atom
 *   i3
     - install dependencies script
     - install i3 and i3 core packages script
