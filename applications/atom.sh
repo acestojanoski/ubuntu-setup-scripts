@@ -28,3 +28,10 @@ echo "############################################"
 echo "Removing the Atom installer"
 echo "############################################"
 sudo rm /tmp/atom-amd64.deb
+
+echo
+echo "############################################"
+echo "Installing Atom packages"
+echo "############################################"
+apm install file-icons emmet apm atom-beautify todo minimap pigments git-plus \
+    highlight-selected autocomplete-modules atom-ternjs language-babel

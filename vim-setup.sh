@@ -35,6 +35,8 @@ echo "################"
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 # install gruvbox theme
 git clone https://github.com/morhetz/gruvbox.git ~/.vim/bundle/gruvbox
+# install minimalist theme
+  git clone https://github.com/dikiaap/minimalist ~/.vim/bundle/minimalist
 # install vim-javascript
 git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript
 # install lightline
@@ -72,4 +74,3 @@ fi
 
 sudo cp /tmp/.vimrc ~/
 sudo rm /tmp/.vimrc
-
