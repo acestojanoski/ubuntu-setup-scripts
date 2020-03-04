@@ -14,15 +14,15 @@ fi
 echo "=============================="
 echo "Downloading skype installer"
 echo "=============================="
-sudo wget https://go.skype.com/skypeforlinux-64.deb -O ${SKYPE_TMP}
+wget https://go.skype.com/skypeforlinux-64.deb -O ${SKYPE_TMP}
 
 echo "=============================="
 echo "Installing skype"
 echo "=============================="
-sudo dpkg -i ${SKYPE_TMP}
-sudo apt-get install -f
+dpkg -i ${SKYPE_TMP}
+apt install -f
 
 echo "=============================="
 echo "Removing the skype installer"
 echo "=============================="
-sudo rm ${SKYPE_TMP}
+rm ${SKYPE_TMP}

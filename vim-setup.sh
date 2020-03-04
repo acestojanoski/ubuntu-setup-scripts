@@ -16,7 +16,7 @@ echo "=============================="
 echo "Installing pathogen"
 echo "=============================="
 if [[ -d ~/.vim ]]; then
-    sudo rm -rf ~/.vim
+    rm -rf ~/.vim
 fi
 
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
