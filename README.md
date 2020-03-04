@@ -1,60 +1,67 @@
-# Linux Setup Scripts
+# Ubuntu Setup Scripts
 
-This is a repository which contains scripts for setting up my linux installation.
+> repository with my Ubuntu setup scripts
 
 Modify them to fit your needs.
 
-## Cloning
-`
-git clone https://gitlab.com/acestojanoski/linux-setup-scripts.git && cd linux-setup-scripts && sudo chmod +x ./*.sh ./applications/*.sh ./theming/*.sh ./i3/*.sh
-`
+## Installation
 
-## Contents
+Run all scripts with `sudo` :)
 
-*   Core packages:
-    - terminator
-    - neofetch
-    - vlc
-    - zip, unzip, rar, unrar
-    - build-essential
-    - vim 
-    - rofi
-    - shutter
-    - meld
-    - Chromium browser
-    - libreoffice
-    - gimp
-    - dmenu
-    - j4-dmenu-desktop
-    - curl
-    - apt-transport-https
-    - transmission
-*   Nvidia driver 390
-*   MT7630E driver for mediatek wireless card
-*   Theming
-    - adapta GTK theme
-    - arc theme
-    - breeze cursor theme
-    - papirus icons
-    - sardi icons
-    - powerline-shell
-    - install-fonts
-*   Applications
-    - nodejs, npm
-    - skype
-    - Visual Studio Code
-    - TeamViewer
-    - Sublime
-    - VirtualBox
-    - Docker
-    - Obs
-    - Atom
-*   i3
-    - install dependencies script
-    - install i3 and i3 core packages script
-    - install i3-gaps script
-*   vim-setup.sh - script for setting up vim
+## Scripts
 
-### Applications
+### Core
 
-You can change the URL of the .deb packages to install other versions of the applications
+-   `core-packages.sh` - Install core packages:
+    -   `vlc`
+    -   `libreoffice`
+    -   `transmission`
+    -   `terminator`
+    -   `gimp`
+    -   `build-essential`
+    -   `vim`
+    -   `rofi`
+    -   `shutter`
+    -   `meld`
+    -   `chromium-browser`
+    -   `neofetch`
+    -   `dmenu`
+    -   `j4-dmenu-desktop`
+    -   `curl`
+    -   `apt-transport-https`
+    -   `zip`
+    -   `unzip`
+    -   `rar`
+    -   `unrar`
+-   `nvidia-390.sh` - Install nvidia 390 driver
+-   `mt7630e-driver.sh` - Install MT7630E driver for Mediatek wireless card
+-   `vim-setup.sh` - Install and set up vim
+
+
+### theming
+
+-   `adapta-theme.sh` - Install adapta theme
+-   `arc-theme.sh` - Install arc theme
+-   `breeze-cursor.sh` - Install breeze cursor theme
+-   `install-fonts.sh` - Install fonts
+-   `papirus-icons.sh` - Install papirus icons
+-   `powerline-shell.sh` - Install powerline shell (if the powerline styling is messed up, install the fonts)
+-   `sardi-icons.sh` - Install sardi icons
+
+### applications
+
+-   `atom.sh` - Install atom
+-   `docker.sh` - Install docker
+-   `nodejs.sh` - Install nodejs and npm
+-   `obs.sh` - Install obs
+-   `skype.sh` - Install skype
+-   `sublime-sh` - Install sublime
+-   `teamviewer.sh` - Install teamviewer
+-   `virtualbox.sh` - Install virtualbox
+-   `vscode.sh` - Install Visual Studio Code
+
+### i3
+
+-   `0-install-dependencies.sh` - Install dependencies
+-   `1-install-i3.sh` - Install i3 and i3 core packages
+-   `2-install-i3-gaps.sh` - Install i3 gaps

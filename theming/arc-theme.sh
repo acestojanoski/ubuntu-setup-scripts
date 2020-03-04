@@ -1,7 +1,13 @@
 #!/bin/bash
 
-echo "Updating package lists"
-sudo apt update
+# Author: Aleksandar Stojanoski
 
+echo "=============================="
+echo "Updating package lists"
+echo "=============================="
+apt update
+
+echo "=============================="
 echo "Installing arc theme"
-sudo apt install arc-theme -y
+echo "=============================="
+apt install arc-theme -y

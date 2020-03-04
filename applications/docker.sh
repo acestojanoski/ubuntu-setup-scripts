@@ -1,12 +1,29 @@
 #!/bin/bash
 
-if [[ -f /tmp/docker-ce_amd64.deb ]]; then
-	sudo rm /tmp/docker-ce_amd64.deb
+# Author: Aleksandar Stojanoski
+
+DOCKER_TMP=/tmp/docker-ce_amd64.deb;
+
+echo "=============================="
+echo "Removing the old docker installer if it exists"
+echo "=============================="
+if [[ -f ${DOCKER_TMP} ]]; then
+	rm ${DOCKER_TMP}
 fi
 
-sudo wget https://download.docker.com/linux/ubuntu/dists/bionic/pool/stable/amd64/docker-ce_18.06.3~ce~3-0~ubuntu_amd64.deb -O /tmp/docker-ce_amd64.deb
+echo "=============================="
+echo "Downloading docker installer"
+echo "=============================="
+wget https://download.docker.com/linux/ubuntu/dists/bionic/pool/stable/amd64/docker-ce_18.06.3~ce~3-0~ubuntu_amd64.deb \
+	-O ${DOCKER_TMP}
 
-sudo dpkg -i /tmp/docker-ce_amd64.deb
-sudo apt-get install -f
+echo "=============================="
+echo "Installing docker"
+echo "=============================="
+dpkg -i ${DOCKER_TMP}
+apt-get install -f
 
-sudo rm /tmp/docker-ce_amd64.deb
+echo "=============================="
+echo "Removing the docker installer"
+echo "=============================="
+rm ${DOCKER_TMP}

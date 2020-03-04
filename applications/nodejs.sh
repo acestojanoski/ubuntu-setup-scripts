@@ -1,6 +1,9 @@
 #!/bin/bash
 
-echo "Installing nodejs and npm"
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-sudo apt-get install -y nodejs
+# Author: Aleksandar Stojanoski
 
+echo "=============================="
+echo "Installing nodejs and npm"
+echo "=============================="
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+apt-get install -y nodejs

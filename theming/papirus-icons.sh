@@ -1,8 +1,13 @@
 #!/bin/bash
 
+# Author: Aleksandar Stojanoski
+
+echo "=============================="
 echo "Updating package lists"
-sudo apt update
+echo "=============================="
+apt update
 
+echo "=============================="
 echo "Installing papirus icons"
-sudo apt install papirus-icon-theme -y
-
+echo "=============================="
+apt install papirus-icon-theme -y
