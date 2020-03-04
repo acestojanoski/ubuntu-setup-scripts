@@ -1,12 +1,22 @@
 #!/bin/bash
 
-sudo apt install build-essential -y
+# Author: Aleksandar Stojanoski
 
-echo "Getting the MT7630E driver repository"
-cd
-sudo rm -r MT7630E
-git clone https://gitlab.com/acestojanoski/MT7630E.git
-cd MT7630E
+echo "=============================="
+echo "Installing dependencies"
+echo "=============================="
+apt install build-essential -y
+
+DRIVER_DIRECTORY=${HOME}/MT7630E
+
+echo "=============================="
+echo "Cloning MT7630E driver repository"
+echo "=============================="
+if [[ -d ${DRIVER_DIRECTORY} ]]; then
+    rm -r ${DRIVER_DIRECTORY}
+fi;
+
+git clone https://github.com/acestojanoski/MT7630E.git ${DRIVER_DIRECTORY}
+
 echo "Installing the driver"
-sudo ./install
-
+${DRIVER_DIRECTORY}/install

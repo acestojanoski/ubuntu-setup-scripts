@@ -1,8 +1,13 @@
 #!/bin/bash
 
+# Author: Aleksandar Stojanoski
+
+echo "=============================="
 echo "Updating package lists"
-sudo apt update
+echo "=============================="
+apt update
 
+echo "=============================="
 echo "Installing breeze cursor theme"
-sudo apt install breeze-cursor-theme -y
-
+echo "=============================="
+apt install breeze-cursor-theme -y

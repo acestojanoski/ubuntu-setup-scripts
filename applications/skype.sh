@@ -1,12 +1,28 @@
 #!/bin/bash
 
-if [[ -f /tmp/skypeforlinux-64.deb ]]; then
-	sudo rm /tmp/skypeforlinux-64.deb
+# Author: Aleksandar Stojanoski
+
+SKYPE_TMP=/tmp/skypeforlinux-64.deb;
+
+echo "=============================="
+echo "Removing the old skype installer if it exists"
+echo "=============================="
+if [[ -f ${SKYPE_TMP} ]]; then
+	rm ${SKYPE_TMP}
 fi
 
-sudo wget https://go.skype.com/skypeforlinux-64.deb -O /tmp/skypeforlinux-64.deb
+echo "=============================="
+echo "Downloading skype installer"
+echo "=============================="
+sudo wget https://go.skype.com/skypeforlinux-64.deb -O ${SKYPE_TMP}
 
-sudo dpkg -i /tmp/skypeforlinux-64.deb
+echo "=============================="
+echo "Installing skype"
+echo "=============================="
+sudo dpkg -i ${SKYPE_TMP}
 sudo apt-get install -f
 
-sudo rm /tmp/skypeforlinux-64.deb
+echo "=============================="
+echo "Removing the skype installer"
+echo "=============================="
+sudo rm ${SKYPE_TMP}

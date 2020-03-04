@@ -1,11 +1,18 @@
 #!/bin/bash
 
+# Author: Aleksandar Stojanoski
+
+echo "=============================="
 echo "Adding the adapta-project PPA"
-sudo add-apt-repository ppa:tista/adapta
+echo "=============================="
+add-apt-repository ppa:tista/adapta
 
+echo "=============================="
 echo "Updating package lists"
-sudo apt update
+echo "=============================="
+apt update
 
+echo "=============================="
 echo "Installing adapta theme"
-sudo apt install adapta-gtk-theme -y
-
+echo "=============================="
+apt install adapta-gtk-theme -y

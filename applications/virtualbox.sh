@@ -1,12 +1,29 @@
 #!/bin/bash
 
-if [[ -f /tmp/virtualbox_amd64.deb ]]; then
-	sudo rm /tmp/virtualbox_amd64.deb
+# Author: Aleksandar Stojanoski
+
+VIRTUALBOX_TMP=/tmp/virtualbox_amd64.deb;
+
+echo "=============================="
+echo "Removing the old virtualbox installer if it exists"
+echo "=============================="
+if [[ -f ${VIRTUALBOX_TMP} ]]; then
+	rm ${VIRTUALBOX_TMP}
 fi
 
-sudo wget https://download.virtualbox.org/virtualbox/6.0.10/virtualbox-6.0_6.0.10-132072~Ubuntu~bionic_amd64.deb -O /tmp/virtualbox_amd64.deb
+echo "=============================="
+echo "Downloading virtualbox installer"
+echo "=============================="
+wget https://download.virtualbox.org/virtualbox/6.0.10/virtualbox-6.0_6.0.10-132072~Ubuntu~bionic_amd64.deb \
+	-O ${VIRTUALBOX_TMP}
 
-sudo dpkg -i /tmp/virtualbox_amd64.deb
-sudo apt install -f
+echo "=============================="
+echo "Installing virtualbox"
+echo "=============================="
+dpkg -i ${VIRTUALBOX_TMP}
+apt install -f
 
-sudo rm /tmp/virtualbox_amd64.deb
+echo "=============================="
+echo "Removing the virtualbox installer"
+echo "=============================="
+rm ${VIRTUALBOX_TMP}

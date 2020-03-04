@@ -2,36 +2,33 @@
 
 # Author: Aleksandar Stojanoski
 
-echo
-echo "############################################"
+ATOM_TMP=/tmp/atom-amd64.deb;
+
+echo "=============================="
 echo "Removing the old Atom installer if it exists"
-echo "############################################"
-if [[ -f /tmp/atom-amd64.deb ]]; then
-    sudo rm /tmp/atom-amd64.deb
+echo "=============================="
+if [[ -f ${ATOM_TMP} ]]; then
+    rm ${ATOM_TMP}
 fi
 
-echo
-echo "############################################"
+echo "=============================="
 echo "Downloading the latest Atom installer"
-echo "##########################################"
-sudo wget https://atom.io/download/deb -O /tmp/atom-amd64.deb
+echo "=============================="
+wget https://atom.io/download/deb -O ${ATOM_TMP}
 
-echo
-echo "############################################"
+echo "=============================="
 echo "Installing Atom"
-echo "############################################"
-sudo dpkg -i /tmp/atom-amd64.deb
-sudo apt install -f
+echo "=============================="
+dpkg -i ${ATOM_TMP}
+apt install -f
 
-echo
-echo "############################################"
+echo "=============================="
 echo "Removing the Atom installer"
-echo "############################################"
-sudo rm /tmp/atom-amd64.deb
+echo "=============================="
+rm ${ATOM_TMP}
 
-echo
-echo "############################################"
+echo "=============================="
 echo "Installing Atom packages"
-echo "############################################"
+echo "=============================="
 apm install file-icons emmet apm atom-beautify todo minimap pigments git-plus \
     highlight-selected autocomplete-modules atom-ternjs language-babel

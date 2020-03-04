@@ -1,4 +1,11 @@
-sudo apt-get install ffmpeg
-sudo add-apt-repository ppa:obsproject/obs-studio
-sudo apt-get update
-sudo apt-get install obs-studio
+#!/bin/bash
+
+# Author: Aleksandar Stojanoski
+
+echo "=============================="
+echo "Installing obs"
+echo "=============================="
+apt install ffmpeg -y
+add-apt-repository ppa:obsproject/obs-studio
+apt update
+apt install obs-studio -y
