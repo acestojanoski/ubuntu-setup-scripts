@@ -6,7 +6,7 @@ Modify them to fit your needs.
 
 ## Installation
 
-Run all scripts with `sudo` :)
+Run all scripts with `sudo` ;)
 
 ## Scripts
 
@@ -33,6 +33,7 @@ Run all scripts with `sudo` :)
     -   `unzip`
     -   `rar`
     -   `unrar`
+    -   `wget`
 -   `nvidia-390.sh` - Install nvidia 390 driver
 -   `mt7630e-driver.sh` - Install MT7630E driver for Mediatek wireless card
 -   `vim-setup.sh` - Install and set up vim

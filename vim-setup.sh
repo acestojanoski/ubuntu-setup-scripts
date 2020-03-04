@@ -2,6 +2,9 @@
 
 # Author: Aleksandar Stojanoski
 
+VIM_DIRECTORY=${HOME}/.vim;
+VIM_CONFIG=${HOME}/.vimrc;
+
 echo "=============================="
 echo "Update package lists"
 echo "=============================="
@@ -15,54 +18,40 @@ apt install vim -y
 echo "=============================="
 echo "Installing pathogen"
 echo "=============================="
-if [[ -d ~/.vim ]]; then
-    rm -rf ~/.vim
-fi
+if [[ -d ${VIM_DIRECTORY} ]]; then
+    rm -rf ${VIM_DIRECTORY}
+fi;
 
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+mkdir -p ${VIM_DIRECTORY}/autoload ${VIM_DIRECTORY}/bundle && \
+    curl -LSso ${VIM_DIRECTORY}/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 echo "=============================="
 echo "Installing plugins"
 echo "=============================="
 # install nerdtree
-git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+git clone https://github.com/scrooloose/nerdtree.git ${VIM_DIRECTORY}/bundle/nerdtree
 # install gruvbox theme
-git clone https://github.com/morhetz/gruvbox.git ~/.vim/bundle/gruvbox
+git clone https://github.com/morhetz/gruvbox.git ${VIM_DIRECTORY}/bundle/gruvbox
 # install minimalist theme
-git clone https://github.com/dikiaap/minimalist ~/.vim/bundle/minimalist
+git clone https://github.com/dikiaap/minimalist ${VIM_DIRECTORY}/bundle/minimalist
 # install vim-javascript
-git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript
+git clone https://github.com/pangloss/vim-javascript.git ${VIM_DIRECTORY}/bundle/vim-javascript
 # install lightline
-git clone https://github.com/itchyny/lightline.vim ~/.vim/pack/plugins/start/lightline
+git clone https://github.com/itchyny/lightline.vim ${VIM_DIRECTORY}/pack/plugins/start/lightline
 # install vim-jsx
-git clone https://github.com/mxw/vim-jsx.git ~/.vim/bundle/vim-jsx
+git clone https://github.com/mxw/vim-jsx.git ${VIM_DIRECTORY}/bundle/vim-jsx
 # install ale
-git clone https://github.com/dense-analysis/ale.git ~/.vim/bundle/ale
-
+git clone https://github.com/dense-analysis/ale.git ${VIM_DIRECTORY}/bundle/ale
 # install YouCompleteMe
-git clone https://github.com/ycm-core/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe
+git clone --recursive https://github.com/ycm-core/YouCompleteMe.git ${VIM_DIRECTORY}/bundle/YouCompleteMe
 apt install build-essential cmake python3-dev -y
-cd ~/.vim/bundle/YouCompleteMe && git submodule update --init --recursive
-python3 install.py --ts-completer
+python3 ${VIM_DIRECTORY}/bundle/YouCompleteMe/install.py --ts-completer
 
 echo "=============================="
 echo "Get config from the repository"
 echo "=============================="
-
-if [[ -f /tmp/.vimrc ]]; then
-    rm /tmp/.vimrc
+if [[ -f ${VIM_CONFIG} ]]; then
+    rm ${VIM_CONFIG}
 fi
 
-wget https://raw.githubusercontent.com/acestojanoski/config-files/master/linux/home/.vimrc -O /tmp/.vimrc
-
-echo "=============================="
-echo "remove the old config if exists and replace it with the new one"
-echo "=============================="
-
-if [[ -f ~/.vimrc ]]; then
-    rm ~/.vimrc
-fi
-
-cp /tmp/.vimrc ~/
-rm /tmp/.vimrc
+wget https://raw.githubusercontent.com/acestojanoski/config-files/master/linux/home/.vimrc -O ${VIM_CONFIG}

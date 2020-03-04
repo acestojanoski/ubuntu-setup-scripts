@@ -12,7 +12,7 @@ echo "Installing core packages"
 echo "=============================="
 apt install vlc libreoffice transmission terminator gimp \
     build-essential vim rofi shutter meld chromium-browser \
-    neofetch dmenu j4-dmenu-desktop curl apt-transport-https -y
+    neofetch dmenu j4-dmenu-desktop curl apt-transport-https wget -y
 
 echo "=============================="
 echo "Installing file compressors"
