@@ -2,27 +2,28 @@
 
 # Author: Aleksandar Stojanoski
 
+# don't allow to run the script as root
+[ $EUID = 0 ] && echo "Error: Don't run the script as root/sudo" && exit 1
+
 SKYPE_TMP=/tmp/skypeforlinux-64.deb;
 
 echo "=============================="
 echo "Removing the old skype installer if it exists"
 echo "=============================="
-if [[ -f ${SKYPE_TMP} ]]; then
-	rm ${SKYPE_TMP}
-fi
+[ -f $SKYPE_TMP ] && sudo rm $SKYPE_TMP
 
 echo "=============================="
 echo "Downloading skype installer"
 echo "=============================="
-wget https://go.skype.com/skypeforlinux-64.deb -O ${SKYPE_TMP}
+wget https://go.skype.com/skypeforlinux-64.deb -O $SKYPE_TMP
 
 echo "=============================="
 echo "Installing skype"
 echo "=============================="
-dpkg -i ${SKYPE_TMP}
-apt install -f
+sudo dpkg -i $SKYPE_TMP
+sudo apt install -f
 
 echo "=============================="
 echo "Removing the skype installer"
 echo "=============================="
-rm ${SKYPE_TMP}
+[ -f $SKYPE_TMP ] && sudo rm $SKYPE_TMP

@@ -2,33 +2,28 @@
 
 # Author: Aleksandar Stojanoski
 
+# don't allow to run the script as root
+[ $EUID = 0 ] && echo "Error: Don't run the script as root/sudo" && exit 1
+
 ATOM_TMP=/tmp/atom-amd64.deb;
 
 echo "=============================="
 echo "Removing the old Atom installer if it exists"
 echo "=============================="
-if [[ -f ${ATOM_TMP} ]]; then
-    rm ${ATOM_TMP}
-fi
+[ -f $ATOM_TMP ] && sudo rm $ATOM_TMP
 
 echo "=============================="
 echo "Downloading the latest Atom installer"
 echo "=============================="
-wget https://atom.io/download/deb -O ${ATOM_TMP}
+wget https://atom.io/download/deb -O $ATOM_TMP
 
 echo "=============================="
 echo "Installing Atom"
 echo "=============================="
-dpkg -i ${ATOM_TMP}
-apt install -f
+sudo dpkg -i $ATOM_TMP
+sudo apt install -f
 
 echo "=============================="
 echo "Removing the Atom installer"
 echo "=============================="
-rm ${ATOM_TMP}
-
-echo "=============================="
-echo "Installing Atom packages"
-echo "=============================="
-apm install file-icons emmet apm atom-beautify todo minimap pigments git-plus \
-    highlight-selected autocomplete-modules atom-ternjs language-babel
+[ -f $ATOM_TMP ] && sudo rm $ATOM_TMP

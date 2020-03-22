@@ -2,21 +2,24 @@
 
 # Author: Aleksandar Stojanoski
 
+# don't allow to run the script as root
+[ $EUID = 0 ] && echo "Error: Don't run the script as root/sudo" && exit 1
+
 echo "=============================="
 echo "Installing dependencies"
 echo "=============================="
-apt install build-essential -y
+sudo apt install build-essential -y
 
 DRIVER_DIRECTORY=${HOME}/MT7630E
 
 echo "=============================="
 echo "Cloning MT7630E driver repository"
 echo "=============================="
-if [[ -d ${DRIVER_DIRECTORY} ]]; then
-    rm -r ${DRIVER_DIRECTORY}
-fi;
+[ -d $DRIVER_DIRECTORY ] && sudo rm -r $DRIVER_DIRECTORY
 
-git clone https://github.com/acestojanoski/MT7630E.git ${DRIVER_DIRECTORY}
+git clone https://github.com/acestojanoski/MT7630E.git $DRIVER_DIRECTORY
 
+echo "=============================="
 echo "Installing the driver"
+echo "=============================="
 ${DRIVER_DIRECTORY}/install

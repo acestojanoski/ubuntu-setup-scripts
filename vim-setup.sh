@@ -2,25 +2,31 @@
 
 # Author: Aleksandar Stojanoski
 
+# don't allow to run the script as root
+[ $EUID = 0 ] && echo "Error: Don't run the script as root/sudo" && exit 1
+
 VIM_DIRECTORY=${HOME}/.vim;
 VIM_CONFIG=${HOME}/.vimrc;
 
 echo "=============================="
 echo "Update package lists"
 echo "=============================="
-apt update
+sudo apt update
 
 echo "=============================="
 echo "Installing vim"
 echo "=============================="
-apt install vim -y
+sudo apt install vim -y
+
+echo "=============================="
+echo "Installing dependencies"
+echo "=============================="
+sudo apt install curl wget build-essential cmake python3-dev
 
 echo "=============================="
 echo "Installing pathogen"
 echo "=============================="
-if [[ -d ${VIM_DIRECTORY} ]]; then
-    rm -rf ${VIM_DIRECTORY}
-fi;
+[ -d $VIM_DIRECTORY ] && sudo rm -rf $VIM_DIRECTORY
 
 mkdir -p ${VIM_DIRECTORY}/autoload ${VIM_DIRECTORY}/bundle && \
     curl -LSso ${VIM_DIRECTORY}/autoload/pathogen.vim https://tpo.pe/pathogen.vim
@@ -44,14 +50,11 @@ git clone https://github.com/mxw/vim-jsx.git ${VIM_DIRECTORY}/bundle/vim-jsx
 git clone https://github.com/dense-analysis/ale.git ${VIM_DIRECTORY}/bundle/ale
 # install YouCompleteMe
 git clone --recursive https://github.com/ycm-core/YouCompleteMe.git ${VIM_DIRECTORY}/bundle/YouCompleteMe
-apt install build-essential cmake python3-dev -y
 python3 ${VIM_DIRECTORY}/bundle/YouCompleteMe/install.py --ts-completer
 
 echo "=============================="
 echo "Get config from the repository"
 echo "=============================="
-if [[ -f ${VIM_CONFIG} ]]; then
-    rm ${VIM_CONFIG}
-fi
+[ -f $VIM_CONFIG ] && sudo rm $VIM_CONFIG
 
-wget https://raw.githubusercontent.com/acestojanoski/config-files/master/linux/home/.vimrc -O ${VIM_CONFIG}
+wget https://raw.githubusercontent.com/acestojanoski/config-files/master/linux/home/.vimrc -O $VIM_CONFIG

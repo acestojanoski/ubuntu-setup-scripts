@@ -3,29 +3,30 @@
 # Author: Aleksandar Stojanoski
 
 echo "=============================="
-echo "Installing sardi icons"
+echo "Unmaintained"
 echo "=============================="
 
-SARDI_TMP=/tmp/sardi.tar.gz;
-ICONS_DIRECTORY=${HOME}/.icons
+# # don't allow to run the script as root
+# [ $EUID = 0 ] && echo "Error: Don't run the script as root/sudo" && exit 1
 
-# cleaning tmp
-if [[ -f ${SARDI_TMP} ]]; then
-    rm -f ${SARDI_TMP}
-fi;
+# echo "=============================="
+# echo "Installing sardi icons"
+# echo "=============================="
 
-# if there is no .icons dir create it
-if [[ -d ${ICONS_DIRECTORY} ]]; then
-    mkdir -p ${ICONS_DIRECTORY}
-fi;
+# SARDI_TMP=/tmp/sardi.tar.gz
+# ICONS_DIRECTORY=${HOME}/.icons
 
-# get latest sardi icons
-wget https://sourceforge.net/projects/sardi/files/latest/download -O ${SARDI_TMP}
+# # cleaning tmp
+# [ -f $SARDI_TMP ] && sudo rm -f $SARDI_TMP
 
-# extract the icons to the .icons dir
-tar -zxf ${SARDI_TMP} -C ${ICONS_DIRECTORY}
+# # if there is no .icons dir create it
+# [ ! -d $ICONS_DIRECTORY ] && mkdir -p $ICONS_DIRECTORY
 
-# cleaning tmp
-if [[ -f ${SARDI_TMP} ]]; then
-    rm -f ${SARDI_TMP}
-fi;
+# # get latest sardi icons
+# wget https://sourceforge.net/projects/sardi/files/latest/download -O $SARDI_TMP
+
+# # extract the icons to the .icons dir
+# tar -zxf $SARDI_TMP -C $ICONS_DIRECTORY
+
+# # cleaning tmp
+# [ -f $SARDI_TMP ] && sudo rm -f $SARDI_TMP

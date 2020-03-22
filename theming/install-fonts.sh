@@ -2,6 +2,9 @@
 
 # Author: Aleksandar Stojanoski
 
+# don't allow to run the script as root
+[ $EUID = 0 ] && echo "Error: Don't run the script as root/sudo" && exit 1
+
 if [[ $PWD != *"ubuntu-setup-scripts/theming" ]]; then
     echo "=============================="
     echo "Please run this script from the theming folder";
