@@ -22,4 +22,4 @@ git clone https://github.com/acestojanoski/MT7630E.git $DRIVER_DIRECTORY
 echo "=============================="
 echo "Installing the driver"
 echo "=============================="
-${DRIVER_DIRECTORY}/install
+sudo ${DRIVER_DIRECTORY}/install

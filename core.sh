@@ -35,13 +35,11 @@ declare -a packages=(
     "unzip"
     "rar"
     "unrar"
+    "firefox"
 )
 
 echo "=============================="
 echo "Installing core packages"
 echo "=============================="
 
-for package in "${packages[@]}"
-do
-    sudo apt install $package -y
-done
+sudo apt install ${packages[*]} -y

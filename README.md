@@ -32,6 +32,7 @@ Modify them to fit your needs.
     - `unzip`
     - `rar`
     - `unrar`
+    - `firefox`
 - `nvidia-390.sh` - Install nvidia 390 driver
 - `mt7630e-driver.sh` - Install MT7630E driver for Mediatek wireless card
 - `vim-setup.sh` - Install and set up vim
