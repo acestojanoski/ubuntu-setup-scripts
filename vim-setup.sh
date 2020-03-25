@@ -57,4 +57,4 @@ echo "Get config from the repository"
 echo "=============================="
 [ -f $VIM_CONFIG ] && sudo rm $VIM_CONFIG
 
-wget https://raw.githubusercontent.com/acestojanoski/config-files/master/linux/home/.vimrc -O $VIM_CONFIG
+wget https://raw.githubusercontent.com/acestojanoski/dotfiles/master/.vimrc -O $VIM_CONFIG
